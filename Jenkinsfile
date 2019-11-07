@@ -25,11 +25,11 @@ pipeline {
         stage('code analysis') { 
             steps {
                 withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
-               sh 'mvn verify sonar:sonar \
-                      -Dsonar.projectKey=maven-org-proj \
-                      -Dsonar.organization=itrainnikhil \
-                      -Dsonar.host.url=https://sonarcloud.io \
-                      -Dsonar.login=f5ecb84e72d8184cdd2f5cc5167c667542600d53 '
+               sh 'mvn sonar:sonar \
+                  -Dsonar.projectKey=maven-mani \
+                  -Dsonar.organization=itrainnikhil \
+                  -Dsonar.host.url=https://sonarcloud.io \
+                  -Dsonar.login=b6e1ad56dddefa92448eb37de9a039e44f7d1b9d'
              }  
             }
         }
